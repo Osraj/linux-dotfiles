@@ -1,0 +1,36 @@
+#########################################################
+### colors
+#########################################################
+#   class                 border         background     text            indicator      child_border
+    client.focused          $col_focused   $col_focused   $col_text_dark  $col_focused   $col_focused
+    client.focused_inactive $col_inactive  $col_inactive  $col_text_light $col_inactive  $col_inactive
+    client.unfocused        $col_text_dark $col_unfocused $col_text_light $col_unfocused $col_unfocused
+    client.urgent           $col_text_dark $col_urgent    $col_text_dark  $col_urgent    $col_urgent
+
+#########################################################
+### Titlebar
+#########################################################
+    # titlebar_border_thickness 1
+    font pango:$uifont 10
+    # titlebar_padding 8 2
+    default_border pixel
+    hide_edge_borders smart
+    # floating_modifier $mod normal
+
+
+
+# window rules
+    # for_window [app_id="mpv"] border normal
+    for_window [window_role="pop-up"] floating enable
+    for_window [window_role="bubble"] floating enable
+    for_window [window_role="task_dialog"] floating enable
+    for_window [window_role="Preferences"] floating enable
+    for_window [window_type="dialog"] floating enable
+    for_window [window_type="menu"] floating enable
+    for_window [window_role="About"] floating enable
+    for_window [class="xdg-desktop-portal-kde"] floating enable
+    for_window [class="ksysguard"] floating enable
+    for_window [class="ksysguard"] sticky enable
+    # for_window [app_id="mpv"] layout tabbed
+    for_window [class="Wine"] floating enable
+    # for_window [app_id="lutris"] floating enable

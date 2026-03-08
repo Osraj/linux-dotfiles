@@ -1,0 +1,34 @@
+# Read `man 5 sway` for a complete reference.
+
+### global Variables
+set $term wezterm
+# Mod4 for Logo(super) key. Use Mod1 for Alt.
+set $mod Mod1
+exec_always "picom --no-fading-openclose"
+
+# Colors
+set $col_focused #4e9699
+set $col_inactive #665c54
+set $col_unfocused #3c3836
+set $col_text_dark #32302f
+set $col_text_light #d4be98
+set $col_urgent #ea6962
+
+# Your preferred application launcher
+# Note: it's recommended that you pass the final command to sway
+set $uifont "Cascadia Mono"
+# set $menu dmenu --no-fading-openclose
+
+
+exec_always ~/.config/i3/background.sh
+exec_always mako
+include ~/.config/i3/binds
+include ~/.config/i3/window
+include ~/.config/i3/monitor
+include ~/.config/i3/swaybar
+
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'

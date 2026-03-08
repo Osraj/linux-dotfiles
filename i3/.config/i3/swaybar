@@ -1,0 +1,18 @@
+# Read `man 5 sway-bar` for more information about this section.
+
+bar {
+    height 25
+    position bottom
+    status_command ~/.config/i3/status.sh
+
+    font pango:$uifont 16
+    # status_command sway-status
+    colors {
+        statusline $col_text_light
+        background #222222
+        # selector         border         background     text
+        focused_workspace  $col_focused   $col_focused   $col_text_dark
+        inactive_workspace $col_unfocused $col_unfocused $col_text_light
+        urgent_workspace   $col_urgent    $col_urgent    $col_text_light
+    }
+}
