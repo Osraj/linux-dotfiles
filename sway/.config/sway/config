@@ -1,0 +1,33 @@
+# Read `man 5 sway` for a complete reference.
+
+### global Variables
+set $term wezterm
+# Mod4 for Logo(super) key. Use Mod1 for Alt.
+set $mod Mod1
+
+# Colors
+set $col_focused #4e9699
+set $col_inactive #665c54
+set $col_unfocused #3c3836
+set $col_text_dark #32302f
+set $col_text_light #d4be98
+set $col_urgent #ea6962
+
+# Your preferred application launcher
+# Note: it's recommended that you pass the final command to sway
+set $uifont "Cascadia Mono"
+set $menu wofi --show drun
+
+
+exec_always ~/.config/sway/background.sh
+exec_always mako
+include ~/.config/sway/binds
+include ~/.config/sway/window
+include ~/.config/sway/monitor
+include ~/.config/sway/swaybar
+
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
