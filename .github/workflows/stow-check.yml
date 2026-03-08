@@ -1,0 +1,29 @@
+name: Stow Check
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  stow-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install stow
+        run: sudo apt-get update && sudo apt-get install -y stow
+      - name: Dry-run stow for all packages
+        run: |
+          failed=0
+          for pkg in */; do
+            pkg="${pkg%/}"
+            # skip non-stow directories
+            case "$pkg" in install|docs|.github) continue ;; esac
+            echo "==> Checking $pkg..."
+            if stow --dir=. --target="$HOME" -n "$pkg" 2>&1; then
+              echo "    OK"
+            else
+              echo "    FAILED"
+              failed=1
+            fi
+          done
+          exit $failed
