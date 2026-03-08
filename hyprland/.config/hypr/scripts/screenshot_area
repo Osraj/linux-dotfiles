@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Area selection screenshot to clipboard and file
+set -euo pipefail
+
+SCREENSHOT_DIR="${HOME}/Pictures/Screenshots"
+mkdir -p "$SCREENSHOT_DIR"
+
+FILENAME="$SCREENSHOT_DIR/screenshot_$(date +%Y%m%d_%H%M%S).png"
+
+if command -v grimblast &>/dev/null; then
+    grimblast --notify copysave area "$FILENAME"
+else
+    grim -g "$(slurp)" "$FILENAME"
+    wl-copy < "$FILENAME"
+    notify-send "Screenshot" "Saved to $FILENAME"
+fi
