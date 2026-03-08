@@ -109,8 +109,12 @@ clone_zsh_plugins() {
 }
 
 setup_zsh() {
-    setup_ohmyzsh
-    clone_zsh_plugins
+    if [[ -f /usr/share/cachyos-zsh-config/cachyos-config.zsh ]]; then
+        echo "==> CachyOS detected, skipping Oh My Zsh/plugin install (provided by system)"
+    else
+        setup_ohmyzsh
+        clone_zsh_plugins
+    fi
     stow_package zsh
 
     echo "==> Setting zsh as default shell..."
