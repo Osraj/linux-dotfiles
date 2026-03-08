@@ -21,50 +21,55 @@ general = "Alacritty"
 history = 10000
 multiplier = 3
 
+# Rose Pine Moon
 [colors]
 draw_bold_text_with_bright_colors = true
 
 [colors.primary]
-background = "0x2E3440"
-foreground = "0xD8DEE9"
+background = "0x232136"
+foreground = "0xe0def4"
+
+[colors.cursor]
+text = "0x232136"
+cursor = "0xe0def4"
 
 [colors.normal]
-black = "0x3B4252"
-red = "0xBF616A"
-green = "0xA3BE8C"
-yellow = "0xEBCB8B"
-blue = "0x81A1C1"
-magenta = "0xB48EAD"
-cyan = "0x88C0D0"
-white = "0xE5E9F0"
+black = "0x393552"
+red = "0xeb6f92"
+green = "0x9ccfd8"
+yellow = "0xf6c177"
+blue = "0x3e8fb0"
+magenta = "0xc4a7e7"
+cyan = "0xea9a97"
+white = "0xe0def4"
 
 [colors.bright]
-black = "0x4C566A"
-red = "0xBF616A"
-green = "0xA3BE8C"
-yellow = "0xEBCB8B"
-blue = "0x81A1C1"
-magenta = "0xB48EAD"
-cyan = "0x8FBCBB"
-white = "0xECEFF4"
+black = "0x6e6a86"
+red = "0xeb6f92"
+green = "0x9ccfd8"
+yellow = "0xf6c177"
+blue = "0x3e8fb0"
+magenta = "0xc4a7e7"
+cyan = "0xea9a97"
+white = "0xe0def4"
 
 [font]
 size = 12
 
 [font.normal]
-family = "monospace"
+family = "Cascadia Mono"
 style = "Regular"
 
 [font.bold]
-family = "monospace"
+family = "Cascadia Mono"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
+family = "Cascadia Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "monospace"
+family = "Cascadia Mono"
 style = "Bold Italic"
 
 [selection]
