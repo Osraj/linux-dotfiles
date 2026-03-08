@@ -18,3 +18,5 @@ run_cmd yay -S --needed --noconfirm \
     pipewire pulseaudio pavucontrol playerctl \
     polkit print-manager snapper \
     wofi ncurses5-compat-libs ntfs-3g
+
+stow_package brave
