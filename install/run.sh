@@ -6,9 +6,7 @@ source "$SCRIPT_DIR/lib.sh"
 
 usage() {
     cat <<'EOF'
-Usage: bash install/run.sh <distro> [tool] [options]
-
-Distros: arch, debian
+Usage: bash install/run.sh arch [tool] [options]
 
 Modes:
   bash install/run.sh arch              Interactive menu (default)
@@ -21,7 +19,7 @@ Options:
   --help        Show this help message
 
 Tools: devtools, yay, fonts, zsh, nvim, tmux, sway, hyprland, i3,
-       ghostty, wezterm, vscodium, essential, miniconda
+       ghostty, wezterm, alacritty, vscodium, theming, essential, miniconda
 
 Examples:
   bash install/run.sh arch                    # interactive menu

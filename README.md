@@ -1,6 +1,6 @@
 # linux-dotfiles
 
-Modular dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level directory mirrors the home directory structure and gets symlinked into `~/`. Works from any location on disk.
+Modular dotfiles for **Arch Linux / CachyOS**, managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level directory mirrors the home directory structure and gets symlinked into `~/`. Works from any location on disk.
 
 ## Quick Start
 
@@ -17,9 +17,6 @@ bash install/run.sh arch all
 # Install a single tool
 bash install/run.sh arch zsh
 bash install/run.sh arch nvim
-
-# Debian/Ubuntu
-bash install/run.sh debian
 ```
 
 After installing, **restart your terminal**.
@@ -49,7 +46,7 @@ linux-dotfiles/
 ├── zsh/                        # Shell: CachyOS/Oh My Zsh, Powerlevel10k, vi mode
 ├── nvim/                       # Editor: lazy.nvim, LSP, Telescope, Treesitter
 ├── tmux/                       # Multiplexer: Ctrl+A prefix, vi keys
-├── hyprland/                   # Wayland compositor + Waybar + Wofi + Mako + Swaylock + Wlogout
+├── hyprland/                   # Wayland compositor + Waybar + Wofi + Mako + Hyprlock + Wlogout
 ├── sway/                       # Wayland compositor (i3-compatible)
 ├── i3/                         # X11 window manager
 ├── ghostty/                    # Terminal: Rose Pine, Cascadia Mono
@@ -63,16 +60,13 @@ linux-dotfiles/
 │   ├── run.sh                  # Dispatcher: bash install/run.sh <distro> [tool]
 │   ├── lib.sh                  # Shared install functions (stow, backup, etc.)
 │   ├── menu.sh                 # Interactive TUI menu
-│   ├── arch/                   # Arch/CachyOS install scripts
-│   └── debian/                 # Debian/Ubuntu install scripts
+│   └── arch/                   # Arch/CachyOS install scripts
 └── docs/                       # Reference files
 ```
 
 ## Available Install Scripts
 
-**Arch:** all, devtools, yay, fonts, zsh, nvim, tmux, sway, hyprland, i3, ghostty, wezterm, alacritty, vscodium, theming, essential, miniconda
-
-**Debian:** all, devtools, zsh, nvim, tmux, sway, miniconda
+all, devtools, yay, fonts, zsh, nvim, tmux, sway, hyprland, i3, ghostty, wezterm, alacritty, vscodium, theming, essential, miniconda
 
 ## Manual Stow Usage
 
