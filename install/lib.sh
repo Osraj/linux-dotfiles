@@ -146,10 +146,10 @@ setup_nvim() {
     local BUILD_DIR="/tmp/neovim-build"
     run_cmd git clone -b release-0.11 --depth 1 https://github.com/neovim/neovim.git "$BUILD_DIR"
     if [[ "${DRY_RUN}" != true ]]; then
-        cd "$BUILD_DIR"
+        cd "$BUILD_DIR" || exit 1
         run_cmd make CMAKE_BUILD_TYPE=Release
         run_cmd sudo make install
-        cd - >/dev/null
+        cd - >/dev/null || exit 1
         rm -rf "$BUILD_DIR"
     else
         echo "[DRY RUN] cd $BUILD_DIR && make CMAKE_BUILD_TYPE=Release && sudo make install"
@@ -168,9 +168,9 @@ setup_yay() {
     local BUILD_DIR="/tmp/yay-build"
     run_cmd git clone https://aur.archlinux.org/yay.git "$BUILD_DIR"
     if [[ "${DRY_RUN}" != true ]]; then
-        cd "$BUILD_DIR"
+        cd "$BUILD_DIR" || exit 1
         run_cmd makepkg -si --noconfirm
-        cd - >/dev/null
+        cd - >/dev/null || exit 1
         rm -rf "$BUILD_DIR"
     else
         echo "[DRY RUN] cd $BUILD_DIR && makepkg -si --noconfirm"

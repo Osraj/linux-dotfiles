@@ -66,6 +66,7 @@ init_selection() {
         SELECTED[$tool]=off
     done
     if [[ -n "${MODE_TOOLS[$mode]:-}" ]]; then
+        # shellcheck disable=SC2086
         for tool in ${MODE_TOOLS[$mode]}; do
             SELECTED[$tool]=on
         done
@@ -80,6 +81,7 @@ resolve_deps() {
         changed=false
         for tool in "${ALL_TOOLS[@]}"; do
             if [[ "${SELECTED[$tool]}" == on && -n "${TOOL_DEPS[$tool]:-}" ]]; then
+                # shellcheck disable=SC2086
                 for dep in ${TOOL_DEPS[$tool]}; do
                     if [[ "${SELECTED[$dep]}" != on ]]; then
                         SELECTED[$dep]=on
@@ -152,6 +154,7 @@ dialog_tool_select() {
     for tool in "${ALL_TOOLS[@]}"; do
         SELECTED[$tool]=off
     done
+    # shellcheck disable=SC2086
     for tool in $result; do
         # dialog quotes items, strip them
         tool="${tool//\"/}"
