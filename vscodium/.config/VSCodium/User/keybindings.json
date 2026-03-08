@@ -1,0 +1,45 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+ n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "d",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "",
+        "commands": "editor.action.outdentLines"
+    },
+    {
+        "key": "",
+        "commands": "editor.action.indentLines"
+    },
+    {
+        "command": "workbench.action.toggleActivityBarVisibility",
+        "key": "ctrl+a"
+    },
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+e",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+e",
+        "when": "editorTextFocus"
+    },
+]
