@@ -37,8 +37,8 @@ bash install/run.sh arch --remove zsh       # remove symlinks for a tool
 | Mode | What's included |
 |------|----------------|
 | **minimal** | devtools, zsh, nvim, tmux, fonts |
-| **work** | minimal + yay, ghostty, vscodium, essential, miniconda |
-| **gaming** | minimal + yay, hyprland, ghostty, essential |
+| **work** | minimal + yay, ghostty, vscodium, theming, essential, miniconda |
+| **gaming** | minimal + yay, hyprland, ghostty, theming, essential |
 | **full** | everything |
 | **custom** | pick your own |
 
@@ -46,15 +46,19 @@ bash install/run.sh arch --remove zsh       # remove symlinks for a tool
 
 ```
 linux-dotfiles/
-├── zsh/                        # Shell: Oh My Zsh, Powerlevel10k, vi mode
+├── zsh/                        # Shell: CachyOS/Oh My Zsh, Powerlevel10k, vi mode
 ├── nvim/                       # Editor: lazy.nvim, LSP, Telescope, Treesitter
 ├── tmux/                       # Multiplexer: Ctrl+A prefix, vi keys
-├── hyprland/                   # Wayland compositor + Waybar + Wofi
+├── hyprland/                   # Wayland compositor + Waybar + Wofi + Mako + Swaylock + Wlogout
 ├── sway/                       # Wayland compositor (i3-compatible)
 ├── i3/                         # X11 window manager
 ├── ghostty/                    # Terminal: Rose Pine, Cascadia Mono
 ├── wezterm/                    # Terminal: Lua config, Rose Pine
+├── alacritty/                  # Terminal: Nord theme
 ├── vscodium/                   # Editor: settings + keybindings
+├── git/                        # Git user config
+├── theming/                    # GTK 3/4, Qt5, Kvantum theme settings
+├── brave/                      # Brave browser flags
 ├── install/
 │   ├── run.sh                  # Dispatcher: bash install/run.sh <distro> [tool]
 │   ├── lib.sh                  # Shared install functions (stow, backup, etc.)
@@ -66,7 +70,7 @@ linux-dotfiles/
 
 ## Available Install Scripts
 
-**Arch:** all, devtools, yay, fonts, zsh, nvim, tmux, sway, hyprland, i3, ghostty, wezterm, vscodium, essential, miniconda
+**Arch:** all, devtools, yay, fonts, zsh, nvim, tmux, sway, hyprland, i3, ghostty, wezterm, alacritty, vscodium, theming, essential, miniconda
 
 **Debian:** all, devtools, zsh, nvim, tmux, sway, miniconda
 

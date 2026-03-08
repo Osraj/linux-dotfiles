@@ -4,7 +4,7 @@
 
 # --- Data Model ---
 
-ALL_TOOLS=(devtools yay fonts zsh nvim tmux sway hyprland i3 ghostty wezterm vscodium essential miniconda)
+ALL_TOOLS=(devtools yay fonts zsh nvim tmux sway hyprland i3 ghostty wezterm alacritty vscodium theming essential miniconda)
 
 declare -A TOOL_DESC=(
     [devtools]="Dev tools (git, stow, fzf, ripgrep, curl, wget)"
@@ -18,7 +18,9 @@ declare -A TOOL_DESC=(
     [i3]="i3 (X11 WM)"
     [ghostty]="Ghostty (terminal emulator)"
     [wezterm]="WezTerm (terminal emulator)"
+    [alacritty]="Alacritty (terminal emulator)"
     [vscodium]="VSCodium (editor)"
+    [theming]="GTK/Qt theming (Nord, Kvantum)"
     [essential]="Essential packages (browsers, dev tools, audio)"
     [miniconda]="Miniconda (Python env manager)"
 )
@@ -34,16 +36,18 @@ declare -A TOOL_DEPS=(
     [i3]="devtools"
     [ghostty]="devtools yay"
     [wezterm]="devtools yay"
+    [alacritty]="devtools"
     [vscodium]="devtools yay"
+    [theming]="devtools"
     [essential]="devtools yay"
     [miniconda]="devtools"
 )
 
 declare -A MODE_TOOLS=(
     [minimal]="devtools zsh nvim tmux fonts"
-    [work]="devtools yay zsh nvim tmux fonts ghostty vscodium essential miniconda"
-    [gaming]="devtools yay zsh nvim tmux fonts hyprland ghostty essential"
-    [full]="devtools yay fonts zsh nvim tmux sway hyprland i3 ghostty wezterm vscodium essential miniconda"
+    [work]="devtools yay zsh nvim tmux fonts ghostty vscodium theming essential miniconda"
+    [gaming]="devtools yay zsh nvim tmux fonts hyprland ghostty theming essential"
+    [full]="devtools yay fonts zsh nvim tmux sway hyprland i3 ghostty wezterm alacritty vscodium theming essential miniconda"
     [custom]=""
 )
 
